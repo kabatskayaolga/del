@@ -620,7 +620,7 @@ p {
     padding: 0; }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   text-transform: uppercase;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -638,7 +638,7 @@ h1 {
         font-size: 0.6em; } }
   @media (max-width: 1200px) {
     h1 {
-      font-size: 3em; } }
+      font-size: 2em; } }
   @media (max-width: 700px) {
     h1 {
       font-size: 2em; } }
@@ -1806,9 +1806,9 @@ input {
   .home.page .head_block_wrapp .head_block {
     margin-top: 100px;
     text-align: center;
-    max-width: 900px; }
+    max-width: 750px; }
   .home.page .head_block_wrapp .head-directions {
-    margin: 2em 0 -15em;
+    margin: 5em 0 -15em;
     text-align: center; }
     .home.page .head_block_wrapp .head-directions__item {
       background-color: white;
@@ -1843,7 +1843,8 @@ input {
       font-size: 2.7em;
       margin-top: 4em; }
       .home.page .head_block_wrapp h1 .label {
-        font-size: 0.7em; } }
+        font-size: 0.7em;
+		text-transform: uppercase; } }
 
 .about_slider {
   margin-top: 2em; }
@@ -2064,7 +2065,7 @@ input {
   .category .head_block_wrapp .head_block,
   .single .head_block_wrapp .head_block {
     margin-top: 100px;
-    max-width: 900px;
+    max-width: 750px;
     position: relative;
     z-index: 2; }
     @media (max-width: 1020px) {
@@ -3041,7 +3042,11 @@ input {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%; }
+      height: 100%;
+	  padding: 2em 4em; }
+    .presentation_block .flex-wrapper,
+	.video_block .flex-wrapper {
+		padding: 2em 4em;	}
   .presentation_block img,
   .video_block img {
     max-width: 100%; }
@@ -3203,7 +3208,7 @@ input {
   text-transform: initial; }
   @media (min-width: 1200px) {
     .page h1 {
-      font-size: 3em; } }
+      font-size: 2em; } }
 
 @media (min-width: 1200px) {
   .page-id-34 .head_block {
