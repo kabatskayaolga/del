@@ -52,47 +52,36 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="presentation_block no-bottom">
+  </div><?php $posts = get_field('лектора');
+  if( $posts ): ?>
+  <?php foreach( $posts as $post): ?>
+  <?php setup_postdata($post); ?>
+  <?php endforeach; ?>
+   <?php wp_reset_postdata(); ?>
+  <?php endif; ?>
+  <div class="aboutUs_block_wrapp" id="about">
     <div class="container">
-      <div class="padding-block">
-        <h2>Инструментарий системы дистанционного обучения </h2><img src="https://seminarna.ru/assets/pages/images/proficariera-distant.jpg" alt="Инструментарий системы дистанционного обучения "/>
-      </div>
-    </div>
-  </div>
-  <div class="lecturers_block_wrapp center__wrapper grey_section" id="lecturers">
-    <div class="container">
-      <h2>Тренеры и преподаватели</h2>
-      <div class="flex-wrapper single-lecturers">
-        <div class="lecturers_slider lecturers_slider_home slider_block lecturers_slider__small">
-          <?php $posts = get_field('лектора');
-          if( $posts ): ?>
-          <?php foreach( $posts as $post): ?>
-          <?php setup_postdata($post); ?>
-          <div>
-            <div class="image_wrapper"><img src="<?php the_post_thumbnail_url(); ?>"/></div>
-            <div class="hidden_block"><span class="specialty"><?php the_field( "специализация" ) ?></span>
-              <h3><?php the_title() ?></h3>
-              <p><?php the_content(); ?></p><a class="button open_modal" data-href="#lector_modal">Задать вопрос лектору</a>
+      <div class="flex-wrapper">
+        <div class="flex-column__2-3"><?php if ( function_exists('dynamic_sidebar') )		dynamic_sidebar('about-dist-cource'); ?>
+          <div class="flex-wrapper in__flex-wrap">
+            <div class="flex-column__2-3">
+              <h5>Каждый дистанционный курс центра профессионального развития «ПРОФИ-КАРЬЕРА» включает:</h5>
+              <p><i class="icon-slider ico-left"></i>Блок теоретической части в виде слайдов</p>
+              <p><i class="icon-customer-service ico-left"></i>Интерактивные диалоговые тренажеры для отработки практических навыков</p>
+              <p><i class="icon-video-player ico-left"></i>Обучающие видеофрагменты с комментариями</p>
+              <p><i class="icon-library ico-left"></i>Библиотеку знаний: нормативную базу по курсу обучения, шаблоны документов, методические пособия</p>
             </div>
-          </div><?php endforeach; ?>
-           <?php wp_reset_postdata(); ?>
-          <?php endif; ?>
+            <div class="flex-column__1-3">
+              <h5>Система контроля обучения включает:</h5>
+              <p><i class="icon-test ico-left"></i>Тестирование</p>
+              <p><i class="icon-clipboard ico-left"></i>Практические задания</p>
+              <p><i class="icon-speech-bubble ico-left"></i>Чат с преподавателем</p>
+              <p><i class="icon-chat ico-left"></i>Форумы для коммуникации с тренером</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="light_container blockquote_block padding-block">
-        <blockquote>«Эффективность Центра «Профи-Карьера» заключается в оптимальном соотношении отработки практических навыков и подачи теоретического материала, и, конечно, в высоком профессионализме тренеров.»</blockquote><em>- Начальник управления по работе с персоналом ОАО «Уралсиб»</em>
-      </div>
-    </div>
-  </div>
-  <div class="presentation_block no-bottom">
-    <div class="container">
-      <div class="padding-block">
-        <h2>Буклет-презентация дистанционного обучения центра «Профи-Карьера»</h2>
-        <div class="iframe-wrapper">
-          <iframe allowfullscreen="" frameborder="0" src="https://www.scribd.com/embeds/359208720/content?start_page=1&amp;view_mode=slideshow&amp;access_key=key-OoKAcDYsKmB6CqtGev7z&amp;show_recommendations=true"></iframe>
+        <div class="aboutUs_block flex-column__1-3">
+          <div class="slider_block about_slider"><?php if ( function_exists('dynamic_sidebar') )		dynamic_sidebar('slider-about-dist-cource'); ?>	</div>
         </div>
       </div>
     </div>

@@ -198,6 +198,26 @@ function delo_widgets_init() {
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Информация "Дистанционный курс" SCORM', 'delo' ),
+		'id'            => 'about-dist-cource',
+		'description'   => esc_html__( 'Добавьте заголовок и текст', 'delo' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( '[Слайдер] "Дистанционный курс" SCORM', 'delo' ),
+		'id'            => 'slider-about-dist-cource',
+		'description'   => esc_html__( 'Добавьте изображения сертификатов', 'delo' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
 	
 }
 add_action( 'widgets_init', 'delo_widgets_init' );
